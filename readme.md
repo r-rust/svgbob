@@ -7,7 +7,27 @@
   to approximate the intended shape. It allows for converting ascii art into
   beautiful svg images.
   
-## Hello World
+This R package wraps the [svgbob](https://crates.io/crates/svgbob) cargo crate.
+  
+## Examples
+
+Input text:
+
+```
+    E +-------------------------*--+     E |                         o    
+    D |-------------------*--*--|--*     D |                   o  o  |  o 
+    C |-------------*--*  |  |  |  |     C |             o  o  |  |  |  | 
+    B |-------*--*  |  |  |  |  |  |     B |       o  o  |  |  |  |  |  | 
+    A +-*--*--+--+--+--+--+--+--+--+     A +-o--o--|--|--|--|--|--|--|--| 
+        5 10 15 20 25 30 35 40 45 50         5 10 15 20 25 30 35 40 45 50 
+```
+
+```r
+text <- readLines(system.file('examples/demo.bob', package = 'svgbob'))
+svgbob(text[66:72], 'chart.svg')
+```
+
+![chart_svg](chart.svg)
 
 Suppose input text looks like this:
 
@@ -60,11 +80,6 @@ Convert to svg or png:
 ```r
 text <- readLines(system.file('examples/circuits.bob', package = 'svgbob'))
 svgbob(text[1:41], 'circuits.svg')
-utils::browseURL('circuits.svg')
-
-# Convert to png
-rsvg::rsvg_png('circuits.svg', 'circuits.png', width = 2000)
-utils::browseURL('circuits.png')
 ```
 
 ![output_svg](circuits.svg)

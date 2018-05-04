@@ -1,0 +1,14 @@
+Package: svgbob
+Type: Package
+Title: Wrapper for the 'svgbob' rust library
+Version: 0.1.0
+Author: Jeroen Ooms
+Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
+Description: Svgbob is a diagramming model which uses a set of typing characters
+    to approximate the intended shape. It allows for converting ascii art into
+    beautiful svg images.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: rsvg

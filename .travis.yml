@@ -4,8 +4,6 @@ latex: false
 fortran: false
 pandoc: false
 
-R: 3.4
-
 matrix:
   include:
     - os: linux
@@ -24,3 +22,5 @@ addons:
 brew_packages:
   - rust
   - librsvg
+
+r_packages: rsvg

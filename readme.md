@@ -93,4 +93,8 @@ svgbob(text[1:41], 'circuits.svg')
 
 ## Installation in R
 
-Please see the [hellorust readme](https://github.com/r-rust/hellorust#installation) for instructions how to compile this on Windows, MacOS or Linux.
+The [hellorust readme](https://github.com/r-rust/hellorust#installation) has instructions on how to setup rust on Windows, MacOS or Linux. After that you can just do:
+
+```r
+devtools::install_github("r-rust/svgbob")
+```

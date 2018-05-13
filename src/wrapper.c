@@ -9,7 +9,7 @@ SEXP R_ascii2svg(SEXP ascii, SEXP svgfile){
   if(!Rf_isString(ascii) || !Rf_isString(svgfile))
     Rf_error("Both ascii and svgfile must be strings");
   run_ascii2svg(CHAR(STRING_ELT(ascii, 0)), CHAR(STRING_ELT(svgfile, 0)));
-  return R_NilValue;
+  return svgfile;
 }
 
 // Standard R package stuff

@@ -18,5 +18,4 @@
 svgbob <- function(text, svgfile = tempfile()){
   ascii <- paste(enc2utf8(text), collapse = "\n")
   .Call(R_ascii2svg, ascii, svgfile)
-  svgfile
 }
